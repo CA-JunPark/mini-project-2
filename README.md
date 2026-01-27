@@ -1,12 +1,13 @@
 # Mini Project II – Heart Disease Prediction
 
 ## Problem Description & Motivation
-Heart disease is one of the leading causes of death worldwide, making early detection critical for improving patient outcomes.  
-The goal of this project is to build and analyze a machine learning pipeline that predicts whether a patient has heart disease based on clinical and diagnostic features. By exploring the dataset, identifying informative predictors, and evaluating model performance, this project aims to understand which factors most strongly contribute to heart disease prediction and how well machine learning models can support medical decision-making.
+The goal of this project is to build and analyze a machine learning pipeline that predicts whether a patient has heart disease based on clinical and diagnostic features. 
 
 ---
 
 ## Dataset Description
+
+This data set dates from 1988 and consists of four databases: Cleveland, Hungary, Switzerland, and Long Beach V. It contains 76 attributes, including the predicted attribute, but all published experiments refer to using a subset of 14 of them. The "target" field refers to the presence of heart disease in the patient. It is integer valued 0 = no disease and 1 = disease.
 
 **Source:** Heart Disease Dataset  
 **Samples:** 303 patients  
@@ -56,6 +57,31 @@ After one-hot encoding categorical variables, the final dataset expanded from **
 
 The dataset is roughly balanced, with approximately **54% diseased** and **46% healthy** patients, reducing the need for aggressive resampling techniques.
 
+Based on exploratory data analysis, the features were grouped by their observed predictive strength.
+
+### Strong Predictive Features
+These features show clear separation between patients with and without heart disease:
+- `max_heart_rate`  
+- `st_depression`  
+- `chest_pain_type`  
+- `num_major_vessels`  
+- `exercise_induced_angina`
+
+### Moderate Predictive Features
+These features show noticeable trends but with overlap between classes:
+- `st_slope`
+- `thalassemia`
+
+### Weak Predictive Features
+These features show similar distributions across classes and limited standalone predictive power:
+- `cholesterol`
+- `resting_blood_pressure`
+- `fasting_blood_sugar`
+- `resting_ecg`
+- `sex`
+- `age`
+
+These findings informed feature importance analysis and model interpretation rather than aggressive feature removal.
 ---
 
 ## Setup Instructions
