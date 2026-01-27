@@ -1,13 +1,70 @@
-# Mini Project 1: Regression Challenge
+# Mini Project II – Heart Disease Prediction
 
-    Jun Park
-    Bryan Rachmat
+## Problem Description & Motivation
+Heart disease is one of the leading causes of death worldwide, making early detection critical for improving patient outcomes.  
+The goal of this project is to build and analyze a machine learning pipeline that predicts whether a patient has heart disease based on clinical and diagnostic features. By exploring the dataset, identifying informative predictors, and evaluating model performance, this project aims to understand which factors most strongly contribute to heart disease prediction and how well machine learning models can support medical decision-making.
 
-### Project Description And Motivation
+---
 
+## Dataset Description
 
+**Source:** Heart Disease Dataset  
+**Samples:** 303 patients  
+**Task:** Binary classification  
 
-### Dataset Description (source, features, target)
+### Original Features (14)
+- `age`: Age of the patient  
+- `sex`: Sex (0 = female, 1 = male)  
+- `cp`: Chest pain type  
+- `trestbps`: Resting blood pressure  
+- `chol`: Serum cholesterol  
+- `fbs`: Fasting blood sugar  
+- `restecg`: Resting ECG results  
+- `thalach`: Maximum heart rate achieved  
+- `exang`: Exercise-induced angina  
+- `oldpeak`: ST depression  
+- `slope`: Slope of peak exercise ST segment  
+- `ca`: Number of major vessels  
+- `thal`: Thalassemia  
+
+### Renamed Features
+For clarity and interpretability, several features were renamed during preprocessing:
+
+| Original Name | Renamed Feature |
+|--------------|----------------|
+| `age` | `age` |
+| `sex` | `sex` |
+| `cp` | `chest_pain_type` |
+| `trestbps` | `resting_blood_pressure` |
+| `chol` | `cholesterol` |
+| `fbs` | `fasting_blood_sugar` |
+| `restecg` | `resting_ecg` |
+| `thalach` | `max_heart_rate` |
+| `exang` | `exercise_induced_angina` |
+| `oldpeak` | `st_depression` |
+| `slope` | `st_slope` |
+| `ca` | `num_major_vessels` |
+| `thal` | `thalassemia` |
+| `target` | `heart_disease` |
+
+After one-hot encoding categorical variables, the final dataset expanded from **14 to 23 features**, improving model expressiveness.
+
+### Target Variable
+- `heart_disease`  
+  - `0` = No heart disease  
+  - `1` = Heart disease  
+
+The dataset is roughly balanced, with approximately **54% diseased** and **46% healthy** patients, reducing the need for aggressive resampling techniques.
+
+---
+
+## Setup Instructions
+
+### 1. Environment Setup
+Ensure Python 3 is installed. Install required packages:
+
+```bash
+pip install pandas numpy scikit-learn matplotlib seaborn
 
 
 ### Setup instructions
