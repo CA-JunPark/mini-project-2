@@ -94,7 +94,12 @@ These findings informed feature importance analysis and model interpretation rat
 run .ipynb files with a created python environment.
 
 ### Result summary with Key Metrics
-
+| | model | precision | recall | f1 | roc auc |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| 0 | Logistic Regression | 0.7812 | 0.8621 | 0.8197 | 0.8621 |
+| 1 | Random Forest | 0.7027 | 0.8966 | 0.7879 | 0.8728 |
+| 2 | KNN | 0.7500 | 0.8276 | 0.7869 | 0.8653 |
+| 3 | Random Forest (tuned) | 0.7429 | 0.8966 | 0.8125 | 0.8669 |
 ### Team Member Contributions
 Bryan Rachmat: 01_data_exploration.ipynb
 
