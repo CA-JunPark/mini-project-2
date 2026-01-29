@@ -82,16 +82,6 @@ These features show similar distributions across classes and limited standalone 
 - `age`
 
 These findings informed feature importance analysis and model interpretation rather than aggressive feature removal.
----
-
-## Setup Instructions
-
-### 1. Environment Setup
-Ensure Python 3 is installed. Install required packages:
-
-```bash
-pip install pandas numpy scikit-learn matplotlib seaborn
-
 
 ### Setup instructions
 
